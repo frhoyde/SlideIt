@@ -1,100 +1,40 @@
-import React, { useState } from "react";
-import { Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import TextField from "@material-ui/core/TextField";
+import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import "./App.css";
-
-const useStyles = makeStyles((theme) => ({
-  root: { 
-    padding: "30" ,
-    "& > *": {
-      width: theme.spacing(45),
-      height: theme.spacing(100),
-    },
-  },
-}));
+import Login from "./components/login.components";
+import SignUp from "./components/signup.components";
 
 function App() {
-  const [usernameReg, setUsernameReg] = useState("");
-  const [passwordReg, setPasswordReg] = useState("");
-  // const register = () => {
-  //   Axios.post("http://localhost:3001/register", {
-  //     username: usernameReg,
-  //     passord: passwordReg,
-  //   }).then((response) => {
-  //     console.log(response);
-  //   });
-  // };
-  const classes = useStyles();
-  return (
+  return (<Router>
     <div className="App">
-      <div className={classes.root} id="Regcard">
-        <Paper elevation={15}>
-          <div className="form_container">
-            <div className="registration">
-              <h1>Registration</h1>
-              <TextField
-                className="input"
-                id="standard-password-input"
-                label="Username"
-                type="text"
-                autoComplete="current-password"
-                onChange={(e) => {
-                  setUsernameReg(e.target.value);
-                }}
-              />
-              <TextField
-                className="input input_2"
-                id="standard-password-input"
-                label="password"
-                type="password"
-                autoComplete="current-password"
-                onChange={(e) => {
-                  setPasswordReg(e.target.value);
-                }}
-              />
-
-              <br />
-              <Button variant="contained" color="primary">
-                {" "}
-                Register{" "}
-              </Button>
-            </div>
-            <br/>
-            <div className="login">
-              <h1>Login</h1>
-              <TextField
-                className="input"
-                id="standard-password-input"
-                label="Username"
-                type="text"
-                autoComplete="current-password"
-                onChange={(e) => {
-                  setUsernameReg(e.target.value);
-                }}
-              />
-              <TextField
-                className="input input_2"
-                id="standard-password-input"
-                label="password"
-                type="password"
-                autoComplete="current-password"
-                onChange={(e) => {
-                  setPasswordReg(e.target.value);
-                }}
-              />
-              <br/>
-              <Button variant="contained" color="primary">
-                {" "}
-                Log in{" "}
-              </Button>
-            </div>
+      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+        <div className="container">
+          <Link className="navbar-brand" to={"/sign-in"}>Slide It</Link>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to={"/sign-in"}>Login</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
+              </li>
+            </ul>
           </div>
-        </Paper>
+        </div>
+      </nav>
+
+      <div className="auth-wrapper">
+        <div className="auth-inner">
+          <Switch>
+            <Route exact path='/' component={Login} />
+            <Route path="/sign-in" component={Login} />
+            <Route path="/sign-up" component={SignUp} />
+          </Switch>
+        </div>
       </div>
-    </div>
+    </div></Router>
   );
 }
 
