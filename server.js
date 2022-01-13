@@ -11,6 +11,7 @@ const port = process.env.PORT || 5500;
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/auth', require('./routes/auth'));
 
 const uri = process.env.ATLAS_URI;
 mongoose
