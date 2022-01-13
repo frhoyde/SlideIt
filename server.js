@@ -1,9 +1,14 @@
+require('dotenv').config({ path: "./config.env"});
+
 const express = require('express');
 const cors = require('cors');
+
 const mongoose = require('mongoose');
+const connectDB = require('./config/db');
 
 
-require('dotenv').config();
+// connect to database
+connectDB();
 
 
 const app = express();
@@ -14,21 +19,11 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 
 const uri = process.env.ATLAS_URI;
-mongoose
-    .connect(uri, {
-        useNewUrlParser: true,
-    })
-    .then()
-    .catch(err => console.log(err));
-
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log("MongoDB database connection established successfully");
-})
 
 
-app.listen(port, () => {
+const server = app.listen(port, () => {console.log(`Server is running on port ${port}`);});
 
-
-    console.log(`Server is running on port ${port}`);
+process.on("unhandledRejection", (err, promise) => {
+    console.log(`Logged error: ${err}`);
+    server.close(() => process.exit(1));
 })
