@@ -41,7 +41,12 @@ import Home from './pages';
 function App(){
   return (
     <Router>
-     <Home/>
+       <Switch>
+             <Route exact path='/' component={Home} exact />
+             <Route path="/signin" component={Login} exact/>
+             <Route path="/signup" component={SignUp} exact/>
+           </Switch>
+    
     </Router>
   );
 }
