@@ -17,7 +17,7 @@ mongoose
     .connect(uri, {
         useNewUrlParser: true,
     })
-    .then(() => console.log('MongoDB connected...'))
+    .then()
     .catch(err => console.log(err));
 
 const connection = mongoose.connection;
