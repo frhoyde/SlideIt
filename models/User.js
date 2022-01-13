@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const path_is_absolute = require('path-is-absolute');
 
 const UserSchema = new mongoose.Schema({
     username: {
@@ -38,6 +39,9 @@ UserSchema.pre("save", async function(next) {
     
 });
 
+UserSchema.methods.matchPasswords = async function(password) {
+    return await bcrypt.compare(password, this.password);
+}
 
 const User = mongoose.model("User", UserSchema);
 
