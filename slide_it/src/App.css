@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Titillium+Web:wght@300&display=swap");
-
 .App {
   text-align: center;
 }
 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -34,83 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Titillium Web", sans-serif;
-}
-
-body {
-  
-  position: relative;
-}
-
-.App {
-  text-align: center;
-}
-
-.form_container {
-  position: relative;
-  top: 40px;
-  bottom: 40px;
-  transform: translateY(-3%);
-}
-
-.input {
-  width: 75%;
-}
-
-h1 {
-  margin-bottom: 10px;
-  font-size: 40px;
-  font-family: "poppins", cursive;
-}
-
-.input_2 {
-  margin-bottom: 10px;
-  margin-top: 7px;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-.ListContainer {
-  margin-top: 60px;
-}
-
-.ListStyle {
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: green;
-  border-radius: 6px;
-  box-shadow: 1px 1px 2px black;
-  padding: 10px;
-  margin: auto;
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.registration, .login {
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-input {
-  width: 250px;
-  height: 40px;
-}
-#Regcard {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  align-items:center ;
- height:100%;
 }
