@@ -12,5 +12,4 @@ exports.forgotpassword = (req, res, next) => {
 
 exports.resetpassword = (req, res, next) => {
     res.send("Reset Password Route");
-}; 
-
+};
