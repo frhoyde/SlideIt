@@ -5,6 +5,7 @@ import MainSection from '../components/LandingPage/MainSection/MainIndex';
 import InfoSection from '../components/LandingPage/InfoSection/InfoIndex';
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/LandingPage/InfoSection/data';
 import Services from '../components/LandingPage/Services/ServiceIndex';
+import Footer from '../components/LandingPage/Footer/FooterIndex';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +21,7 @@ const Home = () => {
             <InfoSection {...homeObjTwo}/>
             
             <Services/>
-           
+           <Footer></Footer>
         </>
     );
 };

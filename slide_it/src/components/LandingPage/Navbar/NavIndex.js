@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import{Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements';
 import {FaBars} from 'react-icons/fa'
 const Navbar = ({toggle}) => {
+    // const [scrollNav, setScrollNav] = useState(true)
+    // const changeNav = ()=> {
+    //     if(window.scrollY >= 80) setScrollNav(false)
+    //     else setScrollNav(false)
+    // }
+    // useEffect (() => {
+    //     window.addEventListener('scroll', changeNav)
+    // }, [])
     return (
        <>
-        <Nav>
+        <Nav >
             <NavbarContainer>
                 <NavLogo to='/'>
                     Slide It!
@@ -14,7 +22,12 @@ const Navbar = ({toggle}) => {
                </MobileIcon>
                <NavMenu>
                    <NavItem>
-                       <NavLinks to = "about">About</NavLinks>
+                       <NavLinks to = "about"
+                       smooth={true}
+                       duration={500}
+                       spy={true}
+                       exact='true'
+                       offset={-80}>About</NavLinks>
                    </NavItem>
                    <NavItem>
                        <NavLinks to = "discover">Discover</NavLinks>

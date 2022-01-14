@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon1 from '../../../images/svg3.svg';
+import Icon1 from '../../../images/svg7.svg';
 import Icon2 from '../../../images/svg2.svg';
 import Icon3 from '../../../images/svg1.svg';
 import { ServicesCard, ServicesContainer, ServicesIcon, ServicesWrapper, ServicesH2, ServicesP , ServicesH1} from './ServiceElements';
@@ -13,12 +13,12 @@ const Services = () => {
                     <ServicesCard>
                         <ServicesIcon src={Icon1}/>
                         <ServicesH2>Themes</ServicesH2>
-                        <ServicesP>ustomizable themes and colour scheme</ServicesP>
+                        <ServicesP>customize themes and colour schemes to your need</ServicesP>
                     </ServicesCard>
                     <ServicesCard>
                         <ServicesIcon src={Icon2}/>
                         <ServicesH2>collaborate with team</ServicesH2>
-                        <ServicesP>Real time collaborative editing with friends and colleagues</ServicesP>
+                        <ServicesP>real time collaborative editing with friends and colleagues</ServicesP>
                     </ServicesCard>
                     <ServicesCard>
                         <ServicesIcon src={Icon3}/>

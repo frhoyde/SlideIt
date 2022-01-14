@@ -19,7 +19,7 @@ export const homeObjTwo = {
     lightBg: true,
     lightText: false,
     topLine: 'Choose templates',
-    headline: 'View numerous templates and choose your own',
+    headline: 'View numerous templates or make your own',
     description: 'Make engaging slideshows with customizable templates and either download the presentation or play and present online. Also, collaborate in the same project with real-time synchronization',
     buttonLabel: 'Templates',
     imgStart: true,

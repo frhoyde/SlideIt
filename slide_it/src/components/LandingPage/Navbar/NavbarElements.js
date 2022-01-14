@@ -3,6 +3,7 @@ import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
 export const Nav = styled.nav`
+    /* background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')}; */
     background: #000;
     height: 80px;
     margin-top: -80px;
@@ -10,8 +11,8 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    position: sticky;
-    top: 0;
+    position: sticky  ;
+    top: 0 ;
     z-index: 10;
 
 
@@ -39,6 +40,10 @@ export const NavLogo = styled(LinkR)`
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
+    &:hover{
+        color: #f47100;
+        transition: 0.3s ease-out;
+    }
 `;
 
 export const MobileIcon = styled.div`
@@ -69,6 +74,10 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
     height: 80px;
+    &:hover{
+        color: #f47100;
+        transition: 0.3s ease-out;
+    }
 `
 
 export const NavLinks = styled(LinkS)`
@@ -82,6 +91,10 @@ export const NavLinks = styled(LinkS)`
 
     &.active{
         border-bottom: 3px solid #F47100;
+    }
+    &:hover{
+        color: #f47100;
+        transition: 0.3s ease-out;
     }
 `
 
