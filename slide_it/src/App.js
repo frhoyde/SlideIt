@@ -1,23 +1,23 @@
-import React from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import React from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/login.components";
 import SignUp from "./components/signup.components";
-import Home from './pages';
-import SigninPage from './pages/signin';
+import Dashboard from "./components/Dashboard/dashboard";
+import Home from "./pages";
+import SigninPage from "./pages/signin";
 
-
-function App(){
+function App() {
   return (
     <Router>
-       <Switch>
-             <Route exact path='/' component={Home} exact />
-             {/* <Route path="/signin" component={Login} exact/> */}
-             <Route path="/signup" component={SigninPage} exact/>
-           </Switch>
-    
+      <Switch>
+        <Route exact path="/" component={Home} exact />
+        {/* <Route path="/signin" component={Login} exact/> */}
+        <Route path="/signup" component={SigninPage} exact />
+        <Route exact path="/dashboard" component={Dashboard} />
+      </Switch>
     </Router>
   );
 }
