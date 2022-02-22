@@ -20,6 +20,7 @@ export const Nav = styled.nav`
         transition: 0.8s all ease;
     }
 `
+
 export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -28,6 +29,8 @@ export const NavbarContainer = styled.div`
     padding: 0 24px;
     z-index: 1;
     max-width: 1100px;
+    position: sticky  ;
+    
 `
 
 export const NavLogo = styled(LinkR)`
