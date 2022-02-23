@@ -1,6 +1,6 @@
 import React from 'react';
 import Signup from '../components/Signin/newsignup/Signup';
-import image from '../images/image2.png';
+import image from '../images/sign-up.png';
 
 const SigninPage = () => {
     return (

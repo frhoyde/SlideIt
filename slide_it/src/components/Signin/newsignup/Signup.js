@@ -19,7 +19,7 @@ export const Signup = () => {
       .min(6, 'Password must be at least 6 charaters')
       .required('Password is required'),
     confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), null], 'Password must match')
+      .oneOf([Yup.ref('password'), null], 'Password does not match')
       .required('Confirm password is required'),
     })
   
@@ -46,7 +46,7 @@ export const Signup = () => {
             <TextField label="Email" name="email" type="email" />
             <TextField label="password" name="password" type="password" />
             <TextField label="Confirm Password" name="confirmPassword" type="password" />
-            <button className="btn btn-dark mt-3" type="submit">Register</button>
+            <button className="btn btn-success mt-3" type="submit">Register</button> <span>     </span>
             <button className="btn btn-danger mt-3 ml-3" type="reset">Reset</button>
           </Form>
         </div>
