@@ -1,5 +1,6 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
+import Avatar from "./avatar";
 
 export default function search() {
   return (
@@ -8,7 +9,8 @@ export default function search() {
         display: "flex",
         justifyContent: "center",
         padding: "20px",
-        // maxWidth: "70%",
+        marginLeft: "30rem",
+        maxWidth: "70%",
       }}
     >
       <form>
@@ -24,6 +26,9 @@ export default function search() {
           <BsSearch />
         </button>
       </form>
+      <div>
+        <Avatar userName="Poushi Sultana"></Avatar>
+      </div>
     </div>
   );
 }

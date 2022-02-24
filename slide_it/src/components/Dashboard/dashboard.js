@@ -14,22 +14,22 @@ import {
 //import icons from react icons
 import {
   FaMagic,
-  FaBrush,
   FaRegHeart,
   FaPlus,
   FaTv,
   FaRegShareSquare,
+  FaTrashAlt,
 } from "react-icons/fa";
 import {
-  FiHome,
+  // FiHome,
+  // FiArrowLeftCircle,
+  // FiArrowRightCircle,
   FiLogOut,
-  FiArrowLeftCircle,
-  FiArrowRightCircle,
 } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
+// import { RiPencilLine } from "react-icons/ri";
 import { BiCog } from "react-icons/bi";
 
-import Avatar from "react-avatar";
+// import Avatar from "react-avatar";
 
 //import card from materialUi
 
@@ -39,6 +39,8 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "react-pro-sidebar/dist/css/styles.css";
 import "./dashboard.css";
 import Search from "./search";
+import Services from "./Cards/card";
+import TemplateCard from "./Cards/templateCards";
 
 const Dashboard = () => {
   //create initial menuCollapse state using useState hook
@@ -64,7 +66,7 @@ const Dashboard = () => {
             </div>
             <div className="closemenu" onClick={menuIconClick}>
               {/* changing menu collapse icon on click */}
-              {menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
+              {/*menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />*/}
             </div>
           </SidebarHeader>
           <SidebarContent>
@@ -77,6 +79,7 @@ const Dashboard = () => {
 
               <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
               <MenuItem icon={<FaRegShareSquare />}>Shared with me</MenuItem>
+              <MenuItem icon={<FaTrashAlt />}>Trash</MenuItem>
               <MenuItem icon={<BiCog />}>Settings</MenuItem>
             </Menu>
           </SidebarContent>
@@ -89,95 +92,42 @@ const Dashboard = () => {
       </div>
       <div>
         <Search />
-        <Avatar
+
+        {/* <Avatar
           name="Afrin Sultana"
           value="86%"
-          size="40"
+          size="60"
           round={true}
           style={{ float: "right", display: "absoulate" }}
-        />
+        /> */}
       </div>
-      <div
-        style={{
-          display: "flex",
-          float: "right",
-          paddingTop: "20px",
-          paddingRight: menuCollapse ? "57%" : "45%",
-        }}
-      >
-        <h4>You're ready to start your first presentation</h4>
-      </div>
+
       <div
         style={{
           display: "flex",
           paddingTop: "20px",
           paddingLeft: menuCollapse ? "10%" : "22%",
         }}
-      >
-        <div style={{ padding: "12px" }}>
-          <div
-            className="card text-white bg-secondary mb-3"
-            style={{
-              width: "20rem",
-              height: "10rem",
-              Hover: "transform: scale(1.05)",
-            }}
-          >
-            {/* <img
-              className="card-img"
-              src={temImg}
-              height="70%"
-              width="39%"
-            ></img> */}
-            <div className="card-header">
-              <p>USE A TEMPLATE</p>
-            </div>
-            <p className="card-text" style={{ padding: "18px" }}>
-              Use any template from our website
-            </p>
-          </div>
-        </div>
+      ></div>
 
-        <div style={{ padding: "12px" }}>
-          <div
-            className="card text-white bg-secondary mb-3"
-            style={{ width: "20rem", height: "10rem" }}
-          >
-            <div className="card-header">
-              <p>BLANK PRESENTATION</p>
-            </div>
-            <p className="card-text" style={{ padding: "18px" }}>
-              {" "}
-              Create your own slides from scratch
-            </p>
-          </div>
-        </div>
+      <Services />
 
-        <div style={{ padding: "12px" }}>
-          <div
-            className="card text-white bg-secondary mb-3"
-            style={{ width: "20rem", height: "10rem" }}
-          >
-            <div className="card-header">
-              <p>REDESIGN A PRESENTATION</p>
-            </div>
-            <p className="card-text" style={{ padding: "18px" }}>
-              {" "}
-              Edit any existing presentation
-            </p>
-          </div>
-        </div>
-      </div>
       <div
         className="RecommendedTemplate"
         style={{
           display: "flex",
           paddingTop: "20px",
+
           paddingLeft: menuCollapse ? "8%" : "20%",
         }}
       >
         Here are some recommended templates to start up
       </div>
+      <TemplateCard
+        img="https://picsum.photos/id/54/400/300"
+        title="What I learned from my visit to The Upside Down"
+        author="Click to view"
+      ></TemplateCard>
     </>
   );
 };
