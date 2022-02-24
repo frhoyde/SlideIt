@@ -2,9 +2,9 @@ import React from 'react';
 import Signup from '../components/Signin/newsignup/Signup';
 import image from '../images/sign-up.png';
 
-const SigninPage = () => {
+const SignupPage = () => {
     return (
-      <div className="container mt-3">
+      <div className="container mt-3" style={{padding:"4%"}}>
       <div className="row">
         <div className="col-md-5">
           <Signup />
@@ -17,4 +17,4 @@ const SigninPage = () => {
   );
 }
 
-export default SigninPage
+export default SignupPage

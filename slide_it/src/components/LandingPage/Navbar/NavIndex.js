@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import{Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements';
+import{Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks,NavLink, NavBtn, NavBtnLink} from './NavbarElements';
 import {FaBars} from 'react-icons/fa'
 const Navbar = ({toggle}) => {
     // const [scrollNav, setScrollNav] = useState(true)
@@ -30,13 +30,21 @@ const Navbar = ({toggle}) => {
                        offset={-80}>About</NavLinks>
                    </NavItem>
                    <NavItem>
-                       <NavLinks to = "discover">Discover</NavLinks>
+                       <NavLinks to = "discover" smooth={true}
+                       duration={500}
+                       spy={true}
+                       exact='true'
+                       offset={-80}>Discover</NavLinks>
                    </NavItem>
                    <NavItem>
-                       <NavLinks to = "services">Services</NavLinks>
+                       <NavLinks to = "services" smooth={true}
+                       duration={500}
+                       spy={true}
+                       exact='true'
+                       offset={-80}>Services</NavLinks>
                    </NavItem>
                    <NavItem>
-                       <NavLinks to = "signin">Sign In</NavLinks>
+                       <NavLink to = "/signin">Sign In</NavLink>
                    </NavItem>
                </NavMenu>
 
