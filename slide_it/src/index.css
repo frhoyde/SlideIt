@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+
   background: #F47100;
   min-height: 100vh;
   display: flex;
