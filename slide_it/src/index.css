@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background: #f47100 !important;
+
+  background: #F47100;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -44,7 +45,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-wrapper .form-control:focus {
-  border-color: #167bff;
+  border-color: #F47100;
   box-shadow: none;
 }
 
@@ -69,5 +70,5 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .forgot-password a {
-  color: #167bff;
+  color: #F47100;
 }
