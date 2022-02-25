@@ -4,7 +4,10 @@ import image from '../images/sign-up.png';
 
 const SignupPage = () => {
     return (
-      <div className="container mt-3" style={{padding:"4%"}}>
+      <div className="container mt-3" style={{height: "100vh", /* Magic here */
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"}}>
       <div className="row">
         <div className="col-md-5">
           <Signup />
