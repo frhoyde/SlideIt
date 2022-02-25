@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 
 const sendEmail = (options) => {
-    const transporter = nodemailer.nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
         service: process.env.EMAIL_SERVICE,
         auth: {
             user: process.env.EMAIL_USERNAME,
@@ -26,3 +26,5 @@ const sendEmail = (options) => {
         }
     });
 };
+
+module.exports = sendEmail;
