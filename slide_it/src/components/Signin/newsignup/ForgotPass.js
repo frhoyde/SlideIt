@@ -2,10 +2,8 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import { TextField } from './TextField';
 import * as Yup from 'yup';
-import ForgotPass from './ForgotPass';
-import { Link } from "react-router-dom";
 
-export const Signin = () => {
+export const ForgotPass = () => {
    const validate = Yup.object({  
     firstName: Yup.string()
     .min(3, 'Must be 15 characters or less')
@@ -41,21 +39,13 @@ export const Signin = () => {
     >
       {formik => (
         <div>
-          <h1 className="my-4 font-weight-bold .display-4">Welcome Back!</h1>
-          <p className="lead">Sign in to continue</p>
+          <h1 className="my-4 font-weight-bold .display-4">Reset Password</h1>
           <Form>
+           
+            <TextField label="Email" name="email" type="email" />
             
-            <TextField label="Email or username" name="email" type="email" />
-            <TextField label="password" name="password" type="password" />
-            
-          
-            
-            <div className="col-6">
-            <button className="btn btn-success mt-3" type="submit">Sign in</button> 
-                                            <div className="forgot-password text-end">
-                                                <Link to="/forgot-password">Forgot password?</Link>
-                                            </div>
-                                        </div>
+            <button className="btn btn-success mt-3" type="submit">Send Code</button> <span>     </span>
+            <button className="btn btn-danger mt-3 ml-3" type="reset">Reset</button>
           </Form>
         </div>
       )}
@@ -63,4 +53,4 @@ export const Signin = () => {
   )
 }
 
-export default Signin
+export default ForgotPass

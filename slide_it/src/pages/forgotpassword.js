@@ -1,8 +1,8 @@
 import React from 'react';
-import Signin from '../components/Signin/newsignup/Signin';
+import Signin from '../components/Signin/newsignup/ForgotPass';
 import image from '../images/image4.png';
 
-const SigninPage = () => {
+const ForgotPassPage = () => {
     return (
       <div className="container mt-3" style={{height: "100vh", /* Magic here */
         display: "flex",
@@ -20,4 +20,4 @@ const SigninPage = () => {
   );
 }
 
-export default SigninPage
+export default ForgotPassPage
