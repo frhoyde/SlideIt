@@ -54,6 +54,25 @@ export const SidebarLink = styled(LinkS)`
     }
 
 `
+
+export const SidebarLinkR = styled(LinkR)`
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover{
+        transition: 0.2s ease-in-out;
+        color: #F47100;        
+    }
+
+`
 export const SideBtnWrap = styled.div`
     display: flex;
     justify-content: center;

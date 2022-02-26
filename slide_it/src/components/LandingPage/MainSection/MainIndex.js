@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Video from '../../../videos/video3.mp4';
+
 import { MainContainer, MainBg, VideoBg, MainContent, MainBtnWrapper, MainH1, MainP,ArrowForward, ArrowRight, ImageBg } from './MainElements';
 import { MyButton, MyButton2 } from '../../ButtonElement';
 import logo from '../../../videos/video.gif';
@@ -25,7 +25,7 @@ const MainSection = () => {
                 A web application to make your slide making experience quick and easy
                 </MainP>
                 <MainBtnWrapper>
-                    <MyButton2 to='signup' onMouseEnter={onHover} onMouseLeave={onHover}  >
+                    <MyButton2 to='/signup' onMouseEnter={onHover} onMouseLeave={onHover}  >
                         Get started 
                          {/* {(hover ? <ArrowForward /> : ArrowRight />)}; */}
                     </MyButton2>

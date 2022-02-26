@@ -66,6 +66,7 @@ export const MainH1 = styled.h1`
     font-size: 48px;
     text-align: center;
 
+    font-weight: bold;
     @media screen and (max-width: 480px){
         font-size: 32px;
     }
@@ -80,6 +81,7 @@ margin-top: 24px;
     font-size: 24px;
     text-align: center;
     max-width: 600px;
+    font-weight: 100;
 
     @media screen and (max-width: 480px){
         font-size: 18px;
