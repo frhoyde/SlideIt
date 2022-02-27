@@ -21,9 +21,9 @@ import {
   FaTrashAlt,
 } from "react-icons/fa";
 import {
-  // FiHome,
-  // FiArrowLeftCircle,
-  // FiArrowRightCircle,
+  FiHome,
+  FiArrowLeftCircle,
+  FiArrowRightCircle,
   FiLogOut,
 } from "react-icons/fi";
 // import { RiPencilLine } from "react-icons/ri";
@@ -43,6 +43,11 @@ import Services from "./Cards/card";
 import TemplateCard from "./Cards/templateCards";
 
 const Dashboard = () => {
+
+  const [isOpen, setIsOpen] = useState(false)
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    }
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false);
 
@@ -54,6 +59,9 @@ const Dashboard = () => {
 
   return (
     <>
+    <div style={{"@media (max-width: 480px)": {
+     setMenuCollapse:true,
+    }}}>
       <div id="dashboard">
         {/* collapsed props to change menu size using menucollapse state */}
         <ProSidebar collapsed={menuCollapse}>
@@ -66,7 +74,7 @@ const Dashboard = () => {
             </div>
             <div className="closemenu" onClick={menuIconClick}>
               {/* changing menu collapse icon on click */}
-              {/*menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />*/}
+             { menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
             </div>
           </SidebarHeader>
           <SidebarContent>
@@ -90,7 +98,7 @@ const Dashboard = () => {
           </SidebarFooter>
         </ProSidebar>
       </div>
-      <div>
+      <div >
         <Search />
 
         {/* <Avatar
@@ -109,8 +117,12 @@ const Dashboard = () => {
           paddingLeft: menuCollapse ? "10%" : "22%",
         }}
       ></div>
-
+      <div
+      style={{
+        paddingLeft: menuCollapse ? "-2%" : "4.5%",
+      }}>
       <Services />
+      </div>
 
       <div
         className="RecommendedTemplate"
@@ -118,16 +130,18 @@ const Dashboard = () => {
           display: "flex",
           paddingTop: "20px",
 
-          paddingLeft: menuCollapse ? "8%" : "20%",
+          paddingLeft: menuCollapse ? "8%" : "30%",
         }}
       >
         Here are some recommended templates to start up
       </div>
-      <TemplateCard
+     {/* <TemplateCard
         img="https://picsum.photos/id/54/400/300"
         title="What I learned from my visit to The Upside Down"
         author="Click to view"
-      ></TemplateCard>
+      ></TemplateCard>  */}
+
+</div>
     </>
   );
 };

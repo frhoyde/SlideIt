@@ -8,8 +8,8 @@ export default function search() {
       style={{
         display: "flex",
         justifyContent: "center",
-        padding: "20px",
-        marginLeft: "30rem",
+        padding: "10px",
+        marginLeft: "23rem",
         maxWidth: "70%",
       }}
     >
@@ -18,7 +18,7 @@ export default function search() {
         <button
           style={{
             padding: "4px 10px",
-            font: "12px",
+            font: "12rem",
             border: "none",
             cursor: "pointer",
           }}
@@ -27,7 +27,7 @@ export default function search() {
         </button>
       </form>
       <div>
-        <Avatar userName="Poushi Sultana"></Avatar>
+        <Avatar userName="Poushi"></Avatar>
       </div>
     </div>
   );

@@ -52,13 +52,13 @@ export const ServicesCard = styled.div`
 `;
 
 export const ServicesIcon = styled.img`
-  height: 160px;
-  width: 160px;
+  height: 140px;
+  width: 140px;
   margin-bottom: 10px;
 `;
 export const ServicesH1 = styled.h1`
   margin-bottom: 44px;
-  padding-right: 30%;
+  //padding-right: 30%;
   font-size: 2rem;
   color: #0d0d0d;
   @media screen and (max-width: 480px) {
@@ -69,6 +69,7 @@ export const ServicesH1 = styled.h1`
 export const ServicesH2 = styled.h2`
   margin-bottom: 10px;
   font-size: 1rem;
+  font-weight: bold;
 `;
 
 export const ServicesP = styled.p`

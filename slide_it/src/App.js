@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 import Dashboard from "./components/Dashboard/dashboard";
+//import Dashboard from "./components/Dashboard/dashboardnew";
 import Home from "./pages";
 import SignupPage from "./pages/signup";
 import SigninPage from "./pages/signin";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signup" component={SignupPage} exact />
         <Route path="/signin" component={SigninPage} exact />
         <Route path="/forgot-password" component={ForgotPassPage} exact />
+        {/* <Route exact path="/dashboard" component={Dashboard} /> */}
         <Route exact path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
