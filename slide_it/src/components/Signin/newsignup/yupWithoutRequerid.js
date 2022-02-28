@@ -2,13 +2,10 @@ import * as Yup from 'yup';
 // import { schemaCompany } from './validateForm'; 
 
 const objYupWithout = {  
-  firstName: Yup.string()
+  username: Yup.string()
   .max(15, 'Must be 15 characters or less')
   .max(15, 'Must be 15 characters or less')
   .required('Required'),
-  lastName: Yup.string()
-    .max(20, 'Must be 20 characters or less')
-    .required('Required'),
   email: Yup.string()
     .email('Email is invalid')
     .required('Email is required'),

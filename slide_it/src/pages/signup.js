@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Signup from '../components/Signin/newsignup/Signup';
 import image from '../images/sign-up.png';
 
