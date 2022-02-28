@@ -82,15 +82,11 @@ const Signin = ({history}) => {
 
     return (
         <div className="row g-0 auth-wrapper">
-            <div className="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-                <div className="auth-background-holder"></div>
-                <div className="auth-background-mask"></div>
-            </div>
-
-            <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
+            <div >
                 <div className="d-flex flex-column align-content-end">
                     <div className="auth-body mx-auto">
-                        <p>Login to your account</p>
+                    <h1 className="my-4 font-weight-bold .display-4">Welcome Back!</h1>
+          <p className="lead">Sign in to continue</p>
                         <div className="auth-form-container text-start">
                             <form className="auth-form" method="POST" onSubmit={loginHandler} autoComplete={'off'}>
                                 <div className="email mb-3">
@@ -119,7 +115,7 @@ const Signin = ({history}) => {
                                             onChange={(e) => setPassword(e.target.value)}
                                         />
 
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'far fa-eye' : 'far fa-eye-slash'} ></i> </button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
 
                                         <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.password) ? 'd-block' : 'd-none'}`} >
                                             {(validate.validate && validate.validate.password) ? validate.validate.password[0] : ''}
@@ -144,12 +140,12 @@ const Signin = ({history}) => {
                                     </div>
                                 </div>
                                 <div className="text-center">
-                                    <button type="submit" className="btn btn-primary w-100 theme-btn mx-auto">Log In</button>
+                                    <button type="submit" className="btn btn-dark w-100 theme-btn mx-auto">Log In</button>
                                 </div>
                             </form>
 
                             <hr />
-                            <div className="auth-option text-center pt-2">No Account? <Link className="text-link" to="/register" >Sign up </Link></div>
+                            <div className="auth-option text-center pt-2">Don't have an Account? <Link className="text-link" to="/register" >Sign up </Link></div>
                         </div>
                     </div>
                 </div>

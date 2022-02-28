@@ -68,11 +68,11 @@ const Dashboard = () => {
           <SidebarHeader>
             <div className="logotext">
               {/* small and big change using menucollapse state */}
-              <p style={{ paddingTop: "7px" }}>
-                {menuCollapse ? "SlideIt" : "Slide_It"}
+              <p style={{ paddingTop: "7px", paddingLeft:"10px" , fontSize:"20px", paddingBottom:"0px", fontWeight:"bold"}}>
+                {menuCollapse ? "SlideIt" : "Slide It"}
               </p>
             </div>
-            <div className="closemenu" onClick={menuIconClick}>
+            <div className="closemenu" onClick={menuIconClick} style={{ paddingTop: "0px", paddingLeft:"10px", fontSize:"20px"}}>
               {/* changing menu collapse icon on click */}
              { menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
             </div>
@@ -129,7 +129,8 @@ const Dashboard = () => {
         style={{
           display: "flex",
           paddingTop: "20px",
-
+          fontWeight:"500",
+          fontSize: "20px",
           paddingLeft: menuCollapse ? "8%" : "30%",
         }}
       >

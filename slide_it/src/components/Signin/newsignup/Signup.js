@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Form from './Form';
+import 'font-awesome/css/font-awesome.min.css';
 
 const Signup = () => {
 
@@ -12,6 +13,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [validate, setValidate] = useState({});
   const [showPassword, setShowPassword] = useState(false);
+  const [designer, setDesigner] = useState(false);
     
 
   const registerHandler = async (e) => {
@@ -95,15 +97,10 @@ const Signup = () => {
 
     return (
         <div className="row g-0 auth-wrapper">
-            <div className="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-                <div className="auth-background-holder"></div>
-                <div className="auth-background-mask"></div>
-            </div>
-
-            <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
+             <div >
                 <div className="d-flex flex-column align-content-end">
                     <div className="auth-body mx-auto">
-                        <p>Create your Account</p>
+                    <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
                         <div className="auth-form-container text-start">
                             <form className="auth-form" method="POST" onSubmit={registerHandler} autoComplete={'off'}>
 
@@ -148,7 +145,7 @@ const Signup = () => {
                                             onChange={(e) => setPassword(e.target.value)}
                                         />
 
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'far fa-eye' : 'far fa-eye-slash'} ></i> </button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
 
                                         <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.password) ? 'd-block' : 'd-none'}`} >
                                             {(validate.validate && validate.validate.password) ? validate.validate.password[0] : ''}
@@ -156,8 +153,36 @@ const Signup = () => {
                                     </div>
 
                                 </div>
+                                <div className="password mb-3">
+                                    <div className="input-group">
+                                        <input type={showPassword ? 'text' : 'password'}
+                                            className={`form-control ${validate.validate && validate.validate.password ? 'is-invalid ' : ''}`}
+                                            name="confirmpassword"
+                                            id="confirmpassword"
+                                            value={confirmpassword}
+                                            placeholder="Confirm Password"
+                                            onChange={(e) => setPassword(e.target.value)}
+                                        />
+
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
+
+                                        <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.password) ? 'd-block' : 'd-none'}`} >
+                                            {(validate.validate && validate.validate.password) ? validate.validate.password[0] : ''}
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div style={{paddingBottom: "12px"}}>
+                                            <div className="form-check">
+                                                <input className="form-check-input" type="checkbox" id="remember" checked={designer} onChange={(e) => setDesigner(e.currentTarget.checked)} />
+                                                <label className="form-check-label" htmlFor="remember">
+                                                   Sign up as a Designer
+                                                </label>
+                                            </div>
+                                        </div>
                                 <div className="text-center">
-                                    <button type="submit" className="btn btn-primary w-100 theme-btn mx-auto">Sign Up</button>
+                                     
+                                    <button type="submit" className="btn btn-dark w-100 theme-btn mx-auto">Sign Up</button>
                                 </div>
                             </form>
 
