@@ -3,7 +3,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+//Private Route
 
+import PrivateRoute from "./components/routing/PrivateRoute";
 import Dashboard from "./components/Dashboard/dashboard";
 import Home from "./pages";
 import SignupPage from "./pages/signup";
@@ -15,6 +17,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        {/* <PrivateRoute exact path="/" componenet={Dashboard}/> */}
         <Route exact path="/" component={Home} exact />
         {/* <Route path="/signin" component={Login} exact/> */}
         <Route path="/signup" component={SignupPage} exact />
