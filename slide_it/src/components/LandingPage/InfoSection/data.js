@@ -46,7 +46,7 @@ export const homeObjFour = {
     topLine: 'Start making presentation',
     headline: 'Create your own presentation slides',
     description: 'Make engaging slideshows with customizable templates and either download the presentation or play and present online. Also, collaborate in the same project with real-time synchronization',
-    buttonLabel: 'Sign up',
+    buttonLabel: 'Sign in',
     imgStart: true,
     img: require('../../../images/start1.jpg'),
     alt: 'SlideShow',
