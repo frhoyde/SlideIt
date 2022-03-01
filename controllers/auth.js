@@ -5,14 +5,15 @@ const sendEmail = require('../utils/sendEmail');
 
 
 exports.register = async (req, res, next) => {
-    const { username, email, password } = req.body;
+    const { username, email, password, isDesigner } = req.body;
 
 
     try {
         const user = await User.create({
             username,
             email,
-            password
+            password,
+            isDesigner
         });
 
         sendToken(user, 201, res);
@@ -45,7 +46,7 @@ exports.login = async (req, res, next) => {
         sendToken(user, 200, res);
        
     } catch(error){
-        res.status(500).json({success: false, error: error.message})
+        res.status(500).json({success: false, error: error.message});
     }
 
 };
@@ -66,7 +67,7 @@ exports.forgotpassword = async(req, res, next) => {
 
         await user.save();
 
-        const resetUrl = `http://localhost:5000/passwordreset/${resetToken}`;
+        const resetUrl = `http://localhost:3000/resetpassword/${resetToken}`;
 
         const message = `
 <h1>You have requested a password reset</h1>

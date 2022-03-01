@@ -93,7 +93,7 @@ const Signup = () => {
         if (showPassword) {
             setShowPassword(false);
         } else {
-            setShowPassword(true)
+            setShowPassword(true);
         }
     };
 

@@ -4,9 +4,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Form from './Form';
 
-const ForgotPass = () => {
-
-    const [email, setEmail] = useState('');
+const ResetPass = () => {
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [validate, setValidate] = useState({});
@@ -32,7 +32,7 @@ const ForgotPass = () => {
         return isValid;
     };
 
-    const forgotPasswordHandler = async (e) => {
+    const resetPasswordHandler = async (e) => {
         e.preventDefault();
 
         const config = {
@@ -41,23 +41,33 @@ const ForgotPass = () => {
             },
         };
 
+        if (password !== confirmPassword) {
+            setPassword("");
+            setConfirmPassword("");
+            setTimeout(() => {
+                setError("");
+            }, 5000);
+           // return setError("Passwords don't match");
+        }
+
         try {
-            const { data } = await axios.post(
-                "/api/auth/forgotpassword",
-                { email },
+            const { data } = await axios.put(
+                `/api/auth/passwordreset/${match.params.resetToken}`,
+                {
+                    password,
+                },
                 config
             );
 
+            console.log(data);
             setSuccess(data.data);
         } catch (error) {
             setError(error.response.data.error);
-            setEmail("");
             setTimeout(() => {
                 setError("");
             }, 5000);
         }
     };
-
     return (
         <div className="row g-0 auth-wrapper">
             <div className="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
@@ -70,7 +80,7 @@ const ForgotPass = () => {
                     <div className="auth-body mx-auto">
                         <p>Forgot Password</p>
                         <div className="auth-form-container text-start">
-                            <form className="auth-form" method="POST" onSubmit={forgotPasswordHandler} autoComplete={'off'}>
+                            <form className="auth-form" method="POST" onSubmit={resetPasswordHandler} autoComplete={'off'}>
                                 <div className="email mb-3">
                                     <input type="email"
                                         className={`form-control ${validate.validate && validate.validate.email ? 'is-invalid ' : ''}`}
