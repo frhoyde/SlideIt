@@ -7,12 +7,15 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import PrivateRoute from "./components/routing/PrivateRoute";
 import Dashboard from "./components/Dashboard/dashboard";
-import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
+// import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
 import Home from "./pages";
 import SignupPage from "./pages/signup";
 import SigninPage from "./pages/signin";
 
 import ForgotPassPage from "./pages/forgotpassword";
+import TextEditor from "./pages/TextEditor";
+
+import { v4 as uuidV4 } from "uuid";
 
 function App() {
   return (
@@ -24,8 +27,13 @@ function App() {
         <Route path="/signup" component={SignupPage} exact />
         <Route path="/signin" component={SigninPage} exact />
         <Route path="/forgot-password" component={ForgotPassPage} exact />
-         <Route exact path="/dashboardTemplate" component={DashboardTemplate} /> 
+        {/* <Route exact path="/dashboardTemplate" component={DashboardTemplate} />  */}
         <Route exact path="/dashboard" component={Dashboard} />
+
+        <Route path="/document" exact>
+          <Redirect to={`/documents/${uuidV4()}`} />
+        </Route>
+        <Route path="/documents/:id" component={TextEditor} />
       </Switch>
     </Router>
   );
