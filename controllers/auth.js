@@ -5,14 +5,15 @@ const sendEmail = require('../utils/sendEmail');
 
 
 exports.register = async (req, res, next) => {
-    const { username, email, password } = req.body;
+    const { username, email, password, isDesigner } = req.body;
 
 
     try {
         const user = await User.create({
             username,
             email,
-            password
+            password,
+            isDesigner
         });
 
         sendToken(user, 201, res);

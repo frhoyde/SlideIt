@@ -24,6 +24,9 @@ const UserSchema = new mongoose.Schema({
         minlength: 8,
         select: false
     },
+    isDesigner: {
+        type: Boolean,
+    },
     resetPasswordToken: String,
     resetPasswordExpire: Date
    
