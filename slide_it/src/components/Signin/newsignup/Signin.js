@@ -56,7 +56,7 @@ const Signin = ({history}) => {
 
         try {
             const { data } = await axios.post(
-                "/api/auth/login",
+                "/api/auth/signin",
                 { email, password },
                 config
             );
