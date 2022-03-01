@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Form from './Form';
 import 'font-awesome/css/font-awesome.min.css';
 
+
 const Signup = () => {
 
   const [username, setUsername] = useState("");
@@ -13,7 +14,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [validate, setValidate] = useState({});
   const [showPassword, setShowPassword] = useState(false);
-  const [designer, setDesigner] = useState(false);
+  const [isDesigner, setDesigner] = useState(false);
     
 
   const registerHandler = async (e) => {
@@ -41,6 +42,7 @@ const Signup = () => {
           username,
           email,
           password,
+          isDesigner
         },
         config
       );
@@ -81,7 +83,7 @@ const Signup = () => {
                 validate: validator.errors
             });
 
-            isValid = false
+            isValid = false;
         }
         return isValid;
     };
@@ -145,7 +147,7 @@ const Signup = () => {
                                             onChange={(e) => setPassword(e.target.value)}
                                         />
 
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
+                                        <button type="button" className="btn btn-outline-dark btn-sm" style={{color:"#000"}} onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
 
                                         <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.password) ? 'd-block' : 'd-none'}`} >
                                             {(validate.validate && validate.validate.password) ? validate.validate.password[0] : ''}
@@ -161,10 +163,10 @@ const Signup = () => {
                                             id="confirmpassword"
                                             value={confirmpassword}
                                             placeholder="Confirm Password"
-                                            onChange={(e) => setPassword(e.target.value)}
+                                            onChange={(e) => setConfirmPassword(e.target.value)}
                                         />
 
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
+                                        <button type="button" className="btn btn-outline-dark btn-sm" style={{color:"#000"}} onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
 
                                         <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.password) ? 'd-block' : 'd-none'}`} >
                                             {(validate.validate && validate.validate.password) ? validate.validate.password[0] : ''}
@@ -173,8 +175,8 @@ const Signup = () => {
 
                                 </div>
                                 <div style={{paddingBottom: "12px"}}>
-                                            <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="remember" checked={designer} onChange={(e) => setDesigner(e.currentTarget.checked)} />
+                                            <div className="form-check" >
+                                                <input className="form-check-input" type="checkbox" id="remember" checked={isDesigner} onChange={(e) => setDesigner(e.currentTarget.checked)} />
                                                 <label className="form-check-label" htmlFor="remember">
                                                    Sign up as a Designer
                                                 </label>
@@ -182,12 +184,12 @@ const Signup = () => {
                                         </div>
                                 <div className="text-center">
                                      
-                                    <button type="submit" className="btn btn-dark w-100 theme-btn mx-auto">Sign Up</button>
+                                    <button type="submit" className="btn btn-link btn-dark w-100 theme-btn mx-auto" to="/dashboard" style={{textDecoration: "none", color:"#fff"}}>Sign Up</button>
                                 </div>
                             </form>
 
                             <hr />
-                            <div className="auth-option text-center pt-2">Have an account? <Link className="text-link" to="/login" >Sign in</Link></div>
+                            <div className="auth-option text-center pt-2">Have an account? <Link className="text-link" style={{textDecoration: "none"}}  to="/signin" >Sign in</Link></div>
                         </div>
                     </div>
                 </div>

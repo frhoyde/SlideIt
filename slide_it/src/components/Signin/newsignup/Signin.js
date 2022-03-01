@@ -115,7 +115,7 @@ const Signin = ({history}) => {
                                             onChange={(e) => setPassword(e.target.value)}
                                         />
 
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
+                                        <button type="button" className="btn btn-outline-dark btn-sm" style={{color:"#000"}} onClick={(e) => togglePassword(e)} ><i className={showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'} ></i> </button>
 
                                         <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.password) ? 'd-block' : 'd-none'}`} >
                                             {(validate.validate && validate.validate.password) ? validate.validate.password[0] : ''}
@@ -140,12 +140,12 @@ const Signin = ({history}) => {
                                     </div>
                                 </div>
                                 <div className="text-center">
-                                    <button type="submit" className="btn btn-dark w-100 theme-btn mx-auto">Log In</button>
+                                    <button type="submit" className="btn btn-link btn-dark w-100 theme-btn mx-auto" to="/dashboard" style={{textDecoration: "none", color:"#fff"}}>Log In</button>
                                 </div>
                             </form>
 
                             <hr />
-                            <div className="auth-option text-center pt-2">Don't have an Account? <Link className="text-link" to="/register" >Sign up </Link></div>
+                            <div className="auth-option text-center pt-2">Don't have an Account? <Link className="text-link" style={{textDecoration: "none"}} to="/register" >Sign up </Link></div>
                         </div>
                     </div>
                 </div>
