@@ -39,14 +39,14 @@ process.on("unhandledRejection", (err, promise) => {
 
 /**** For Document Server *****/
 
-mongoose.connect("mongodb://localhost:3000/document", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-});
+// mongoose.connect("mongodb://localhost:3000/document", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useFindAndModify: false,
+//   useCreateIndex: true,
+// });
 
-const io = require("socket.io")(port, {
+const io = require("socket.io")(3001, {
   cors: {
     origin: "http://localhost:3000",
     methods: ["GET", "POST"],
