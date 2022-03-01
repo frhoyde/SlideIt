@@ -43,11 +43,10 @@ import Services from "./Cards/card";
 import TemplateCard from "./Cards/templateCards";
 
 const Dashboard = () => {
-
-  const [isOpen, setIsOpen] = useState(false)
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false);
 
@@ -59,90 +58,92 @@ const Dashboard = () => {
 
   return (
     <>
-    <div style={{"@media (max-width: 480px)": {
-     setMenuCollapse:true,
-    }}}>
-      <div id="dashboard">
-        {/* collapsed props to change menu size using menucollapse state */}
-        <ProSidebar collapsed={menuCollapse}>
-          <SidebarHeader>
-            <div className="logotext">
-              {/* small and big change using menucollapse state */}
-              <p style={{ paddingTop: "7px", paddingLeft:"10px" , fontSize:"20px", paddingBottom:"0px", fontWeight:"bold"}}>
-                {menuCollapse ? "SlideIt" : "Slide It"}
-              </p>
-            </div>
-            <div className="closemenu" onClick={menuIconClick} style={{ paddingTop: "0px", paddingLeft:"10px", fontSize:"20px"}}>
-              {/* changing menu collapse icon on click */}
-             { menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
-            </div>
-          </SidebarHeader>
-          <SidebarContent>
-            <Menu iconShape="square">
-              <MenuItem active={true} icon={<FaPlus />}>
-                New Presentation
-              </MenuItem>
-              <MenuItem icon={<FaMagic />}>Explore Templates</MenuItem>
-              <MenuItem icon={<FaTv />}>My Presentations</MenuItem>
+      <div>
+        <div id="dashboard">
+          {/* collapsed props to change menu size using menucollapse state */}
+          <ProSidebar collapsed={menuCollapse}>
+            <SidebarHeader>
+              <div className="logotext">
+                {/* small and big change using menucollapse state */}
+                <p
+                  style={{
+                    paddingTop: "7px",
+                    paddingLeft: "10px",
+                    fontSize: "20px",
+                    paddingBottom: "0px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {menuCollapse ? "SlideIt" : "Slide It"}
+                </p>
+              </div>
+              <div
+                className="closemenu"
+                onClick={menuIconClick}
+                style={{
+                  paddingTop: "0px",
+                  paddingLeft: "10px",
+                  fontSize: "20px",
+                }}
+              >
+                {/* changing menu collapse icon on click */}
+                {menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
+              </div>
+            </SidebarHeader>
+            <SidebarContent>
+              <Menu iconShape="square">
+                <MenuItem active={true} icon={<FaPlus />}>
+                  New Presentation
+                </MenuItem>
+                <MenuItem icon={<FaMagic />}>Explore Templates</MenuItem>
+                <MenuItem icon={<FaTv />}>My Presentations</MenuItem>
 
-              <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
-              <MenuItem icon={<FaRegShareSquare />}>Shared with me</MenuItem>
-              <MenuItem icon={<FaTrashAlt />}>Trash</MenuItem>
-              <MenuItem icon={<BiCog />}>Settings</MenuItem>
-            </Menu>
-          </SidebarContent>
-          <SidebarFooter>
-            <Menu iconShape="square">
-              <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
-            </Menu>
-          </SidebarFooter>
-        </ProSidebar>
-      </div>
-      <div >
-        <Search />
+                <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
+                <MenuItem icon={<FaRegShareSquare />}>Shared with me</MenuItem>
+                <MenuItem icon={<FaTrashAlt />}>Trash</MenuItem>
+                <MenuItem icon={<BiCog />}>Settings</MenuItem>
+              </Menu>
+            </SidebarContent>
+            <SidebarFooter>
+              <Menu iconShape="square">
+                <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
+              </Menu>
+            </SidebarFooter>
+          </ProSidebar>
+        </div>
+        <div>
+          <Search />
 
-        {/* <Avatar
+          {/* <Avatar
           name="Afrin Sultana"
           value="86%"
           size="60"
           round={true}
           style={{ float: "right", display: "absoulate" }}
         /> */}
-      </div>
+        </div>
 
-      <div
-        style={{
-          display: "flex",
-          paddingTop: "20px",
-          paddingLeft: menuCollapse ? "10%" : "22%",
-        }}
-      ></div>
-      <div
-      style={{
-        paddingLeft: menuCollapse ? "-2%" : "4.5%",
-      }}>
-      <Services />
-      </div>
+        <div
+          style={{
+            display: "flex",
+            paddingTop: "20px",
+            paddingLeft: menuCollapse ? "10%" : "22%",
+          }}
+        ></div>
+        <div
+          style={{
+            paddingLeft: menuCollapse ? "-2%" : "0%",
+          }}
+        >
+          <Services />
+        </div>
 
-      <div
-        className="RecommendedTemplate"
-        style={{
-          display: "flex",
-          paddingTop: "20px",
-          fontWeight:"500",
-          fontSize: "20px",
-          paddingLeft: menuCollapse ? "8%" : "30%",
-        }}
-      >
-        Here are some recommended templates to start up
-      </div>
-     {/* <TemplateCard
+        {/* <TemplateCard
         img="https://picsum.photos/id/54/400/300"
         title="What I learned from my visit to The Upside Down"
         author="Click to view"
       ></TemplateCard>  */}
-
-</div>
+      </div>
     </>
   );
 };
