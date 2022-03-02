@@ -95,7 +95,14 @@ const Dashboard = () => {
                 <MenuItem active={true} icon={<FaPlus />}>
                   New Presentation
                 </MenuItem>
-                <MenuItem icon={<FaMagic />}>Explore Templates</MenuItem>
+                <MenuItem
+                  icon={<FaMagic />}
+                  onClick={(event) =>
+                    (window.location.href = "/dashboardTemplate")
+                  }
+                >
+                  Explore Templates
+                </MenuItem>
                 <MenuItem icon={<FaTv />}>My Presentations</MenuItem>
 
                 <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
