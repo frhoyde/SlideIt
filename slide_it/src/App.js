@@ -14,7 +14,7 @@ import {
 //import PrivateRoute from "./components/routing/PrivateRoute";
 import Dashboard from "./components/Dashboard/dashboard";
 
-// import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
+import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
 
 import Home from "./pages";
 import SignupPage from "./pages/signup";
@@ -36,7 +36,7 @@ function App() {
         <Route path="/signin" component={SigninPage} exact />
         <Route path="/forgot-password" component={ForgotPassPage} exact />
 
-        {/* <Route exact path="/dashboardTemplate" component={DashboardTemplate} />  */}
+        <Route exact path="/dashboardTemplate" component={DashboardTemplate} />
 
         <Route exact path="/dashboard" component={Dashboard} />
 
