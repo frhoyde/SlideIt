@@ -2,13 +2,9 @@ import { lazy } from 'react';
 
 const routes = [
     {
-        path: 'home',
-        component: lazy(() => import('components/Home')),
-        exact: true
-    },
-    {
-        path: 'users',
-        component: lazy(() => import('components/Users')),
+        path: '/dashboard',
+        component: lazy(() => import('../Dashboard/dashboard')),
+        
         exact: true
     }
 ];

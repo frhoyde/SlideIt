@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import routes from 'routes'; // Route list
+import routes from './routes'; // Route list
 
 const ProtectedRoutes = () => (
     <Switch>

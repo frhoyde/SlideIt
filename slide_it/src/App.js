@@ -28,7 +28,7 @@ import TextEditor from "./pages/TextEditor";
 import { v4 as uuidV4 } from "uuid";
 
 function App() {
-    const isAuthenticated = getToken();
+    const isAuthenticated = localStorage.getItem("authToken");
   return (
     <Router>
       <Switch>
