@@ -4,10 +4,7 @@ import routes from 'routes'; // Route list
 
 const ProtectedRoutes = () => (
     <Switch>
-        <Suspense
-            fallback={<Loader />}
-        >
-            {routes.map(({ component: Component, path, exact }) => (
+                    {routes.map(({ component: Component, path, exact }) => (
                 <Route
                     path={`/${path}`}
                     key={path}
@@ -16,7 +13,6 @@ const ProtectedRoutes = () => (
                     <Component />
                 </Route>
             ))}
-        </Suspense>
     </Switch>
 );
 
