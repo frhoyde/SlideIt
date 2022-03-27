@@ -11,7 +11,7 @@ import {
 
 //Private Route
 
-//import PrivateRoute from "./components/routing/PrivateRoute";
+import PrivateRoute from "./components/routing/PrivateRoute";
 import Dashboard from "./components/Dashboard/dashboard";
 
 // import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        {/* <PrivateRoute exact path="/" componenet={Dashboard}/> */}
+        <PrivateRoute exact path="/dashboard" component={Dashboard}/>
         <Route exact path="/" component={Home} exact />
         {/* <Route path="/signin" component={Login} exact/> */}
         <Route path="/signup" component={SignupPage} exact />
@@ -38,7 +38,7 @@ function App() {
 
         {/* <Route exact path="/dashboardTemplate" component={DashboardTemplate} />  */}
 
-        <Route exact path="/dashboard" component={Dashboard} />
+        {/*<Route exact path="/dashboard" component={Dashboard} />*/}
 
         <Route path="/document" exact>
           <Redirect to={`/documents/${uuidV4()}`} />

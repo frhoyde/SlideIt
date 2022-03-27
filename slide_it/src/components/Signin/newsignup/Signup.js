@@ -29,7 +29,7 @@ const Signup = () => {
       setTimeout(() => {
         setError("");
       }, 5000);
-      // return setError("Passwords do not match");
+     // return setError("Passwords do not match");
     }
 
     try {
@@ -106,6 +106,7 @@ const Signup = () => {
                 onSubmit={registerHandler}
                 autoComplete={"off"}
               >
+                {error && <span className="error-message" value={error}/>}
                 <div className="name mb-3">
                   <input
                     type="text"
