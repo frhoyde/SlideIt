@@ -33,7 +33,7 @@ function App() {
     <Router>
       <Switch>
         <PrivateRoute exact path="/dashboard" component={Dashboard} isAuntheticated={isAuthenticated}/>
-        <PublicRoute exact path="/" component={Home} exact isAuthenticated={isAuthenticated} />
+        <PublicRoute exact path="/" component={Home}  isAuthenticated={isAuthenticated} />
         <PublicRoute path="/signup" component={SignupPage} exact isAuthenticated={isAuthenticated}/>
         <PublicRoute path="/signin" component={SigninPage} exact isAuthenticated={isAuthenticated}/>
         <PublicRoute path="/forgot-password" component={ForgotPassPage} exact isAuthenticated={isAuthenticated}/>

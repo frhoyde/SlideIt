@@ -3,19 +3,20 @@ import {
     Redirect
 } from 'react-router-dom';
 
-function PrivateRoute({ children, isAuthenticated, ...rest }) {
+function PrivateRoute({ children, authToken, ...rest }) {
+    localStorage.setItem("authToken", data.token);
     return (
         <Route
             {...rest}
             render={
                 ({ location }) => (
-                    isAuthenticated
+                    authToken
                         ? (
                             children
                         ) : (
                             <Redirect
                                 to={{
-                                    pathname: '/login',
+                                    pathname: '/signin',
                                     state: { from: location }
                                 }}
                             />
