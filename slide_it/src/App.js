@@ -11,6 +11,7 @@ import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
 import Home from "./pages";
 import SignupPage from "./pages/signup";
 import SigninPage from "./pages/signin";
+import Presentation from "./components/Presentation";
 
 import ForgotPassPage from "./pages/forgotpassword";
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/forgot-password" component={ForgotPassPage} exact />
          <Route exact path="/dashboardTemplate" component={DashboardTemplate} /> 
         <Route exact path="/dashboard" component={Dashboard} />
+        <Route path="/presentation" component={Presentation} exact />
       </Switch>
     </Router>
   );

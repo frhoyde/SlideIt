@@ -1,0 +1,94 @@
+{
+  "slides": [
+    {
+      "order": 0,
+      "state": "headerList",
+      "elements": [
+        {
+          "id": 10,
+          "type": "heading",
+          "value": "Slide it: An opinionated presentation app",
+          "level": 1
+        },
+        {
+          "id": 20,
+          "type": "list",
+          "value": "<li>It places your elements in the <span class=\"bold\">right place</span> so you don't have to.</li><li>It's <span class=\"bold\">open-source</span>.</li><li>Let's get started! Go on to the <span class=\"bold\">next slide</span>.</li>",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "elements": [
+        {
+          "id": 1617460018451,
+          "type": "heading",
+          "level": 2,
+          "value": "Try adding a paragraph to this slide"
+        },
+        {
+          "id": 1617645218380,
+          "type": "image",
+          "value": "data:image/png;base64,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"
+        }
+      ],
+      "state": "headerImage"
+    },
+    {
+      "order": 2,
+      "elements": [
+        {
+          "id": 1617645288761,
+          "type": "heading",
+          "level": 2,
+          "value": "Every slide falls back to the normal template"
+        },
+        {
+          "id": 1617645306659,
+          "type": "paragraph",
+          "value": "There are predefined templates for every slide based on the type and the number of elements. When you add or remove an element, the slide will figure its new state and re-render."
+        },
+        {
+          "id": 1617645368769,
+          "type": "heading",
+          "level": 6,
+          "value": "Select and remove this heading for the slide to be re-structured"
+        },
+        {
+          "id": 1617645497885,
+          "type": "paragraph",
+          "value": "This slide uses the normal template."
+        }
+      ],
+      "state": "normal"
+    },
+    {
+      "order": 3,
+      "elements": [
+        {
+          "id": 1617459674409,
+          "type": "blockquote",
+          "value": "Does making a presentation has to be so hard? <span class=\"bold\">No</span>!"
+        }
+      ],
+      "state": "blockquote"
+    },
+    {
+      "order": 4,
+      "elements": [
+        {
+          "id": 1617459741626,
+          "type": "heading",
+          "level": 1,
+          "value": "Enjoy Slide it"
+        }
+      ],
+      "state": "singleHeader"
+    }
+  ],
+  "size": [
+    960,
+    700
+  ]
+}

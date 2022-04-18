@@ -1,10 +1,11 @@
 import React from 'react';
 import Signin from '../components/Signin/newsignup/Signin';
 import image from '../images/image4.png';
+import "../components/scss/auth.css";
 
 const SigninPage = () => {
     return (
-      <div className="container mt-3" style={{height: "100vh", /* Magic here */
+      <div className="container mt-3" style={{height: "100vh", 
         display: "flex",
         justifyContent: "center",
         alignItems: "center"}}>
