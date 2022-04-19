@@ -29,10 +29,14 @@ const TopContainer = styled.div`
 const BottomContainer = styled.div`
   flex: 2;
   padding: 1.5em;
+  display: flex;
+  justify-content: center;
+
   color: ${({ theme }) => theme.colours.secondaryNormalText};
   background-color: ${({ theme }) => theme.colours.secondaryBackground};
   p {
     padding-bottom: 0.5em;
+    
   }
 `;
 
