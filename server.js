@@ -2,16 +2,53 @@ require("dotenv").config({ path: "./config.env" });
 
 const express = require("express");
 const cors = require("cors");
-
+const bodyParser = require('body-parser');
+const path = require('path');
+const cypto = require('crypto');
+const http = require("http");
 const mongoose = require("mongoose");
+const multer = require('multer');
+const GridFsStorage = require("multer-gridfs-storage");
+const Grid  = require("gridfs-stream");
+const methodOverride = require("method-override");
 const connectDB = require("./config/db");
 const errorHandler = require("./middleware/error");
 const Socketio = require("socket.io");
 const Document = require("./Document");
-const http = require("http");
+const gridfsStream = require("gridfs-stream");
+
 
 // connect to database
 connectDB();
+var conn = mongoose.connection;
+
+// init GridFs
+let gfs;
+
+conn.once("open", ()=>{
+    gfs = Grid(conn.db, mongoose.mongo);
+});
+
+// storage engine
+var storage = new GridFsStorage({
+    url: process.env.ATLAS_URI,
+    file: (req, file) => {
+        return new Promise((resolve, reject) => {
+            crypto.randomBytes(16, (err, buf) => {
+                if (err) {
+                    return reject(err);
+                }
+                const filename = buf.toString('hex') + path.extname(file.originalname);
+                const fileInfo = {
+                    filename: filename,
+                    bucketName: 'uploads'
+                };
+                resolve(fileInfo);
+            });
+        });
+    }
+});
+const upload = multer({ storage });
 
 const app = express();
 const port = process.env.PORT || 4000;
