@@ -2,7 +2,7 @@ import { useContext } from "react";
 import styled from "styled-components";
 
 //import { ReactComponent as FooterIcon } from "bootstrap-icons/icons/align-bottom.svg";
-import { BiCog  as FooterIcon  } from "react-icons/bi";
+import { BiArrowToBottom  as FooterIcon  } from "react-icons/bi";
 
 import { SlidesContext } from "../../../../context/slides";
 

@@ -4,7 +4,7 @@ import { BsTypeBold as BoldIcon } from "react-icons/bs";
 import { BsTypeItalic as ItalicIcon } from "react-icons/bs";
 import { BsLink as LinkIcon } from "react-icons/bs";
 import { BsCheckLg as CheckIcon } from "react-icons/bs";
-import { BsFillBackspaceReverseFill as CancelIcon } from "react-icons/bs";
+import { BsX as CancelIcon } from "react-icons/bs";
 import rangyClassApplier from "rangy/lib/rangy-classapplier";
 import rangySelectionSaveRestore from "rangy/lib/rangy-selectionsaverestore";
 

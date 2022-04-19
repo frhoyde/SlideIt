@@ -1,9 +1,9 @@
 import React, { useCallback, useRef, useState, useContext } from "react";
 import styled from "styled-components";
 import sanitizeHtml from "sanitize-html";
-import { BsFillBackspaceReverseFill as ClearFormattingIcon } from "react-icons/bs";
-import { BsFillTrashFill as TrashIcon } from "react-icons/bs";
-import { BsFillPlusCircleFill as IncreaseIcon } from "react-icons/bs";
+import { BsX as ClearFormattingIcon } from "react-icons/bs";
+import { BsTrash as TrashIcon } from "react-icons/bs";
+import { BsPlus as IncreaseIcon } from "react-icons/bs";
 import { BsDash as DecreaseIcon } from "react-icons/bs";
 
 import useClickOutside from "./hooks/clickOutside";

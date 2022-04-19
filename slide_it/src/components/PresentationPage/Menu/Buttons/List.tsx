@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 import { useEffect, useRef, useState, useContext } from "react";
 //import { ReactComponent as ListUlIcon } from "bootstrap-icons/icons/list-ul.svg";
-import { BiCog  as ListUlIcon  } from "react-icons/bi";
+import { BsListUl  as ListUlIcon  } from "react-icons/bs";
+import { BsList  as ListIcon  } from "react-icons/bs";
 //import { ReactComponent as ListOlIcon } from "bootstrap-icons/icons/list-ol.svg";
-import { BiCog  as ListOlIcon  } from "react-icons/bi";
+import { BsListOl  as ListOlIcon  } from "react-icons/bs";
 
 import { SlidesContext } from "../../../..//context/slides";
 
@@ -55,7 +56,7 @@ function List() {
           setListSelected(true);
         }}
       >
-        <ListUlIcon />
+        <ListIcon />
       </StyledButton>
       {listSelected && (
         <Modal>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 //import { ReactComponent as RedoIcon } from "bootstrap-icons/icons/arrow-clockwise.svg";
-import { BiCog  as RedoIcon  } from "react-icons/bi";
+import { BsArrowClockwise  as RedoIcon  } from "react-icons/bs";
 import { HistoryContext } from "../../../../context/history";
 
 import StyledButton from "../StyledButton";

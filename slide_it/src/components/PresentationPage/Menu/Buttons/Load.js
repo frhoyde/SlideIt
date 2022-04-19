@@ -1,7 +1,7 @@
 import { forwardRef, useContext } from "react";
 import { fileOpen } from "browser-fs-access";
 //import { ReactComponent as LoadIcon } from "bootstrap-icons/icons/folder.svg";
-import { BiCog  as LoadIcon  } from "react-icons/bi";
+import { BsFolder2  as LoadIcon  } from "react-icons/bs";
 import { SlidesContext } from "../../../../context/slides";
 import { DeckContext } from "../../../../context/deck";
 

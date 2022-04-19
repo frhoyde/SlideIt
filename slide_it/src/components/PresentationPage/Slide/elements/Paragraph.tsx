@@ -1,8 +1,8 @@
 import React, { useCallback, useRef, useState, useContext } from "react";
 import styled from "styled-components";
 import sanitizeHtml from "sanitize-html";
-import { BsFillTrashFill as TrashIcon } from "react-icons/bs";
-import { BsFillBackspaceReverseFill as ClearFormattingIcon } from "react-icons/bs";
+import { BsTrash as TrashIcon } from "react-icons/bs";
+import { BsX as ClearFormattingIcon } from "react-icons/bs";
 
 import { ActionsButton, ButtonsBar } from "../ActionsButton";
 import useClickOutside from "./hooks/clickOutside";

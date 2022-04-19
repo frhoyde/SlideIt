@@ -5,7 +5,7 @@ import { fileOpen } from "browser-fs-access";
 import { SlidesContext } from "../../../../context/slides";
 import { DeckContext } from "../../../../context/deck";
 //import { ReactComponent as ImageIcon } from "bootstrap-icons/icons/card-image.svg";
-import { BiCog  as ImageIcon  } from "react-icons/bi";
+import { BsFillImageFill  as ImageIcon  } from "react-icons/bs";
 
 import StyledButton from "../StyledButton";
 import { HistoryContext } from "../../../../context/history";
