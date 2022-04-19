@@ -5,7 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { Draggable } from "react-beautiful-dnd";
 
-import { BsFillTrashFill as TrashIcon } from "react-icons/bs";
+import { BsTrash as TrashIcon } from "react-icons/bs";
 import { BsPlus as AddIcon } from "react-icons/bs";
 
 import Slide from "../Slide/Slide";

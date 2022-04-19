@@ -172,6 +172,6 @@ function Paragraph({
   );
 }
 
-Paragraph.displayName = "Paragraph";
+Paragraph.displayName = "Text";
 
 export default Paragraph;
