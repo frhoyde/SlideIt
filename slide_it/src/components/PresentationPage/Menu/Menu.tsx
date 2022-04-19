@@ -12,6 +12,7 @@ import List from "./Buttons/List";
 import Image from "./Buttons/Image";
 import Paragraph from "./Buttons/Paragraph";
 import Save from "./Buttons/Save";
+import Download from "./Buttons/download";
 import Undo from "./Buttons/Undo";
 import Redo from "./Buttons/Redo";
 import Load from "./Buttons/Load";
@@ -62,6 +63,7 @@ function Menu({ togglePresent }: { togglePresent: () => void }) {
         </StyledButton>
         <New ref={fileHandle} />
         <Save ref={fileHandle} />
+        <Download ref={fileHandle}/>
         <Load ref={fileHandle} />
         <Settings />
         
