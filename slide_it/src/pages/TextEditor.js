@@ -21,15 +21,15 @@ export default function TextEditor() {
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
 
-  useEffect(() => {
-    const s = io("http://localhost:3001");
-    console.log(s);
-    setSocket(s);
+  // useEffect(() => {
+  //   const s = io("http://localhost:3001");
+  //   console.log(s);
+  //   setSocket(s);
 
-    return () => {
-      s.disconnect();
-    };
-  }, []);
+  //   return () => {
+  //     s.disconnect();
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (socket == null || quill == null) return;
