@@ -30,6 +30,11 @@ import {
   HeaderListImageBuilder,
 } from "./headerListImage";
 
+import {
+  HeaderListImageRenderer1,
+  HeaderListImageBuilder1,
+} from "./headerListImage1";
+
 export const renderersMap: Record<State, any> = {
   singleHeader: SingleHeaderRenderer,
   twoHeaders: TwoHeadersRenderer,

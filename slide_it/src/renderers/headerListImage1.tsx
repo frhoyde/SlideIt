@@ -38,14 +38,14 @@ const LeftContainer = styled.div`
 `;
 const RightContainer = styled.div`
   flex: 2;
-  padding: 1.5em;
-  max-width: 50%;
+  padding: 1em;
+
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export function HeaderListImageRenderer({
+export function HeaderListImageRenderer1({
   children,
 }: {
   children: JSX.Element[];
@@ -69,7 +69,7 @@ export function HeaderListImageRenderer({
   );
 }
 
-export const HeaderListImageBuilder: Builder = {
+export const HeaderListImageBuilder1: Builder = {
   add: (type) => {
     return "normal";
   },

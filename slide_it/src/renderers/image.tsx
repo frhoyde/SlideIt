@@ -4,13 +4,15 @@ import { Builder } from "../types";
 
 const Container = styled.div`
   height: 100%;
-  padding: 1.5em;
+  padding: 1em;
 `;
 
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  
+  background-color: ${({ theme }) => theme.colours.secondaryBackground};
 
   & > div {
     position: absolute;

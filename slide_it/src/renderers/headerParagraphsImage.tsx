@@ -37,6 +37,7 @@ const ParagraphContainer = styled.div`
 const RightContainer = styled.div`
   flex: 2;
   padding: 1.5em;
+  max-width: 50%;
   color: ${({ theme }) => theme.colours.secondaryNormalText};
   background-color: ${({ theme }) => theme.colours.secondaryBackground};
 
