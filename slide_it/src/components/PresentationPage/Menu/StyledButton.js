@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  padding: 1em;
+  padding: .85em;
   margin-right: 0.3em;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -9,8 +9,8 @@ const StyledButton = styled.button`
 
   svg {
     vertical-align: middle;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.3em;
+    height: 1.3em;
   }
 
   &:hover,

@@ -5,16 +5,16 @@ import styled from "styled-components";
 import { DeckContext } from "../../context/deck";
 
 const colours = [
-  "#e3fafc",
-  "#c5f6fa",
-  "#99e9f2",
-  "#66d9e8",
-  "#3bc9db",
-  "#22b8cf",
-  "#15aabf",
-  "#1098ad",
-  "#0c8599",
-  "#0b7285",
+  "#FFF8E1",
+  "#FFECB3",
+  "#FFE082",
+  "#FFD54F",
+  "#FFCA28",
+  "#FFC107",
+  "#FFB300",
+  "#FFA000",
+  "#FF8F00",
+  "#FF6F00",
 ];
 
 const StyledLoadingBar = styled.div<{ loading: boolean }>`

@@ -10,13 +10,13 @@ const StyledProgressBarContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 0.5em;
+  height: 0.3em;
   right: 0;
   bottom: 0;
   z-index: 999999999;
 `;
 const StyledProgressBarItem = styled.div<{ active: boolean }>`
-  ${({ active }) => active && `background: #15aabf;`}
+  ${({ active }) => active && `background: #FFB300;`}
   flex: 1;
   height: 100%;
 `;

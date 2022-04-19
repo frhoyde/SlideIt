@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
-//import Deck from "./PresentationPage/Deck.tsx";
 import Deck from "./Deck.tsx";
 
 const GlobalStyle = createGlobalStyle`
@@ -33,8 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
 
-  // Credits to: https://codepen.io/cbracco/pen/qzukg
-  /* Add this attribute to the element that needs a tooltip */
+  /*attribute to the element that needs a tooltip */
   [data-tooltip] {
     position: relative;
     z-index: 99999999;
