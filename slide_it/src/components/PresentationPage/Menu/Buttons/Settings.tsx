@@ -115,7 +115,9 @@ function Settings() {
                 >
                   <option value="default">Default</option>
                   <option value="dark">Dark</option>
-                  <option value="purple">Purple</option>
+                  <option value="beige">Beige</option>
+                  <option value="orange">Orange</option>
+                  <option value="maroon">Maroon</option>
                 </select>
               </FieldContainer>
             </RowContainer>

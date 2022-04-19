@@ -6,7 +6,7 @@ import { SlidesContext } from "../../../../context/slides";
 import StyledButton from "../StyledButton";
 
 //function New(_: any, ref: any) {
-const New = (ref)=> {
+const New = (_, ref)=> {
   const { setCurrentSlide, setSlides } = useContext(SlidesContext);
 
   async function newFile() {

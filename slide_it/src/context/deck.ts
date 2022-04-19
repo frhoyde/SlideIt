@@ -10,11 +10,11 @@ export type ColourLabels =
 
 export type Colours = Record<ColourLabels, string>;
 
-type ColourTemplate = "default" | "dark" | "purple";
+type ColourTemplate = "default" | "dark" | "beige" | "orange" | "maroon";
 
 const colourTemplates: Record<ColourTemplate, Record<ColourLabels, string>> = {
   default: {
-    primaryBackground: "#4285f4",
+    primaryBackground: "#8acbd1",
     primaryHeaderText: "#ffffff",
     primaryNormalText: "#ffffff",
     secondaryBackground: "#ffffff",
@@ -29,13 +29,29 @@ const colourTemplates: Record<ColourTemplate, Record<ColourLabels, string>> = {
     secondaryHeaderText: "#ffffff",
     secondaryNormalText: "#adadad",
   },
-  purple: {
+  beige: {
     primaryBackground: "#313a4c",
     primaryHeaderText: "#ffffff",
     primaryNormalText: "#d9c4b1",
     secondaryBackground: "#ece3da",
     secondaryHeaderText: "#002f4a",
     secondaryNormalText: "#ffffff",
+  },
+  orange: {
+    primaryBackground: "#BF360C",
+    primaryHeaderText: "#ffffff",
+    primaryNormalText: "#FFF3E0",
+    secondaryBackground: "#FFCCBC",
+    secondaryHeaderText: "#E65100",
+    secondaryNormalText: "#ffffff",
+  },
+  maroon: {
+    primaryBackground: "#85a2b6",
+    primaryHeaderText: "#bbcedd",
+    primaryNormalText: "#dce4eb",
+    secondaryBackground: "#d69293",
+    secondaryHeaderText: "bbcedd",
+    secondaryNormalText: "#a00d1e",
   },
 };
 
