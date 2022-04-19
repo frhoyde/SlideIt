@@ -1,6 +1,6 @@
 import styled from "styled-components";
 //import { ReactComponent as ExitIcon } from "bootstrap-icons/icons/box-arrow-left.svg";
-import { BiCog  as ExitIcon  } from "react-icons/bi";
+import { BsArrowLeftSquare  as ExitIcon  } from "react-icons/bs";
 import StyledButton from "./Menu/StyledButton";
 
 const Container = styled.div`

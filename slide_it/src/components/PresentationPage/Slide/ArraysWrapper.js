@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import { SlidesContext } from "../../../context/slides";
 
-import { ReactComponent as LeftIcon } from "bootstrap-icons/icons/chevron-left.svg";
-import { ReactComponent as RightIcon } from "bootstrap-icons/icons/chevron-right.svg";
+import { BsChevronCompactLeft as LeftIcon } from "react-icons/bs";
+import { BsChevronCompactRight as RightIcon } from "react-icons/bs";
 
 const InnerContainer = styled.div`
   position: relative;
