@@ -74,7 +74,7 @@ function Menu({ togglePresent }: { togglePresent: () => void }) {
           <Paragraph />
           <Image />
           <List />
-          <Quote />
+          {/* <Quote /> */}
           <Footer />
           <Codeblock />
         </>
