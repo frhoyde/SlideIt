@@ -1,22 +1,29 @@
-import { Redirect, Route } from "react-router-dom";
+import {
+    Route,
+    Redirect
+} from 'react-router-dom';
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
+function PrivateRoute({ children, authToken, ...rest }) {
+    localStorage.setItem("authToken", data.token);
     return (
         <Route
-          {...rest}
-          render={
-              (props) => {
-                  localStorage.getItem("authToken") ? (
-                      <Component {...props} />
-                  ) : (
-                      <Redirect to='/signup' />
-                  );
-
-              }
-          }
-
+            {...rest}
+            render={
+                ({ location }) => (
+                    authToken
+                        ? (
+                            children
+                        ) : (
+                            <Redirect
+                                to={{
+                                    pathname: '/signin',
+                                    state: { from: location }
+                                }}
+                            />
+                        ))
+            }
         />
     );
-};
+}
 
-export default PrivateRoute
+export default PrivateRoute;

@@ -1,5 +1,6 @@
 //import useState hook to create menu collapse state
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 //import react pro sidebar components
 import {
@@ -43,6 +44,7 @@ import Services from "./Cards/card";
 import TemplateCard from "./Cards/templateCards";
 
 const Dashboard = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -55,6 +57,27 @@ const Dashboard = () => {
     //condition checking to change state from true to false and vice versa
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
+
+    useEffect(() => {
+        const fetchPrivateDate = async () => {
+            const config = {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+                },
+            };
+
+            try {
+                const { data } = await axios.get("/api/dashboard", config);
+                setPrivateData(data.data);
+            } catch (error) {
+                localStorage.removeItem("authToken");
+                setError("You are not authorized please login");
+            }
+        };
+
+        fetchPrivateDate();
+    }, []);
 
   return (
     <>

@@ -10,8 +10,9 @@ import {
 } from "react-router-dom";
 
 //Private Route
-
-//import PrivateRoute from "./components/routing/PrivateRoute";
+import ProtectedRoutes from './components/routing/PrivateRoute' //Authenticated routes
+import PublicRoute from './components/routing/PublicRoute';
+import PrivateRoute from './components/routing/ProtectedRoute'; 
 import Dashboard from "./components/Dashboard/dashboard";
 
 import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
@@ -23,9 +24,11 @@ import SigninPage from "./pages/signin";
 import ForgotPassPage from "./pages/forgotpassword";
 import TextEditor from "./pages/TextEditor";
 
+
 import { v4 as uuidV4 } from "uuid";
 
 function App() {
+    const isAuthenticated = localStorage.getItem("authToken");
   return (
     <Router>
       <Switch>
@@ -40,6 +43,7 @@ function App() {
 
         <Route exact path="/dashboard" component={Dashboard} />
 
+        
         <Route path="/document" exact>
           <Redirect to={`/documents/${uuidV4()}`} />
         </Route>

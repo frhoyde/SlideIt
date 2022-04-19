@@ -190,7 +190,6 @@ const Signin = () => {
                     className="btn btn-link btn-dark w-100 theme-btn mx-auto"
                     to="/dashboard"
                     style={{ textDecoration: "none", color: "#fff" }}
-                    onClick={(event) => (window.location.href = "/dashboard")}
                   >
                     Log In
                   </button>
