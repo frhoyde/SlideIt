@@ -7,8 +7,8 @@ import { DeckContext } from "../../../../context/deck";
 
 import StyledButton from "../StyledButton";
 
-//function Load(_: any, ref: any) {
-  const Load = (ref)=> {
+function Load(_: any, ref: any) {
+ 
 
   const { setSlides } = useContext(SlidesContext);
   const { setLoading, setSize, setColours } = useContext(DeckContext);
