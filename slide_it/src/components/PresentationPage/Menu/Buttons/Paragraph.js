@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useContext } from "react";
 //import { ReactComponent as ParagraphIcon } from "bootstrap-icons/icons/text-paragraph.svg";
-import { BiCog  as ParagraphIcon  } from "react-icons/bi";
+import { BsTextareaT  as ParagraphIcon  } from "react-icons/bs";
 import { SlidesContext } from "../../../../context/slides";
 
 import StyledButton from "../StyledButton";
@@ -18,7 +18,7 @@ function Paragraph() {
   return (
     <Container>
       <StyledButton
-        data-tooltip="Paragraph"
+        data-tooltip="Textbox"
         onClick={() => {
           const id = new Date().getTime();
 

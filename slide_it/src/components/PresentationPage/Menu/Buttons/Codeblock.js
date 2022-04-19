@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useContext } from "react";
 //import { ReactComponent as CodeblockIcon } from "bootstrap-icons/icons/code-slash.svg";
-import { BiCog  as CodeblockIcon  } from "react-icons/bi";
+import { BsCodeSlash  as CodeblockIcon  } from "react-icons/bs";
 import { SlidesContext } from "../../../../context/slides";
 import { HistoryContext } from "../../../../context/history";
 

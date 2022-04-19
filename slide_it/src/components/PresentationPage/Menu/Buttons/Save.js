@@ -1,7 +1,7 @@
 import { forwardRef, useContext } from "react";
 import { fileSave } from "browser-fs-access";
 //import { ReactComponent as SaveIcon } from "bootstrap-icons/icons/save.svg";
-import { BiCog  as SaveIcon  } from "react-icons/bi";
+import { BsSave2  as SaveIcon  } from "react-icons/bs";
 import { SlidesContext } from "../../../../context/slides";
 import { DeckContext } from "../../../../context/deck";
 

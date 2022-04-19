@@ -1,6 +1,6 @@
 import { forwardRef, useContext } from "react";
 //import { ReactComponent as NewIcon } from "bootstrap-icons/icons/file-earmark-plus.svg";
-import { BiCog  as NewIcon  } from "react-icons/bi";
+import { BsFileEarmarkPlus  as NewIcon  } from "react-icons/bs";
 import { SlidesContext } from "../../../../context/slides";
 
 import StyledButton from "../StyledButton";

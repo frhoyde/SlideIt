@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useRef, useState, useContext } from "react";
 //import { ReactComponent as H1Icon } from "bootstrap-icons/icons/type-h1.svg";
-import { BiCog  as H1Icon  } from "react-icons/bi";
+import { BiHeading  as H1Icon  } from "react-icons/bi";
 import { SlidesContext } from "../../../../context/slides";
 
 import StyledButton from "../StyledButton";

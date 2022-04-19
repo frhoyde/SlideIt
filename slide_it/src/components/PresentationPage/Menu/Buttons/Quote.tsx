@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useContext } from "react";
 
 //import { ReactComponent as BlockquoteIcon } from "bootstrap-icons/icons/blockquote-left.svg";
-import { BiCog  as BlockquoteIcon  } from "react-icons/bi";
+import { BsBlockquoteLeft  as BlockquoteIcon  } from "react-icons/bs";
 import { SlidesContext } from "../../../../context/slides";
 
 import StyledButton from "../StyledButton";
