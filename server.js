@@ -16,7 +16,8 @@ connectDB();
 const app = express();
 const port = process.env.PORT || 4000;
 
-//const ser = http.createServer(app);
+// const ser = http.createServer(app);
+// const io = Socketio(ser);
 
 app.use(cors());
 app.use(express.json());
@@ -56,6 +57,7 @@ const io = require("socket.io")(3001, {
 const defaultValue = "";
 
 io.on("connection", (socket) => {
+  console.log("ConnecTed");
   socket.on("get-document", async (documentId) => {
     const document = await findOrCreateDocument(documentId);
     socket.join(documentId);
@@ -78,3 +80,6 @@ async function findOrCreateDocument(id) {
   if (document) return document;
   return await Document.create({ _id: id, data: defaultValue });
 }
+io.on("connect_error", (err) => {
+  console.log(`connect_error due to ${err.message}`);
+});

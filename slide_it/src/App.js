@@ -15,7 +15,7 @@ import PublicRoute from './components/routing/PublicRoute';
 import PrivateRoute from './components/routing/ProtectedRoute'; 
 import Dashboard from "./components/Dashboard/dashboard";
 
-// import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
+import DashboardTemplate from "./components/Dashboard/dashboardTemplate";
 
 import Home from "./pages";
 import SignupPage from "./pages/signup";
@@ -32,11 +32,16 @@ function App() {
   return (
     <Router>
       <Switch>
-        <PrivateRoute exact path="/dashboard" component={Dashboard} isAuntheticated={isAuthenticated}/>
-        <PublicRoute exact path="/" component={Home}  isAuthenticated={isAuthenticated} />
-        <PublicRoute path="/signup" component={SignupPage} exact isAuthenticated={isAuthenticated}/>
-        <PublicRoute path="/signin" component={SigninPage} exact isAuthenticated={isAuthenticated}/>
-        <PublicRoute path="/forgot-password" component={ForgotPassPage} exact isAuthenticated={isAuthenticated}/>
+        {/* <PrivateRoute exact path="/" componenet={Dashboard}/> */}
+        <Route exact path="/" component={Home} exact />
+        {/* <Route path="/signin" component={Login} exact/> */}
+        <Route path="/signup" component={SignupPage} exact />
+        <Route path="/signin" component={SigninPage} exact />
+        <Route path="/forgot-password" component={ForgotPassPage} exact />
+
+        <Route exact path="/dashboardTemplate" component={DashboardTemplate} />
+
+        <Route exact path="/dashboard" component={Dashboard} />
 
         
         <Route path="/document" exact>

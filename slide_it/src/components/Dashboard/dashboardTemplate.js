@@ -1,6 +1,5 @@
 //import useState hook to create menu collapse state
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 
 //import react pro sidebar components
 import {
@@ -27,24 +26,17 @@ import {
   FiArrowRightCircle,
   FiLogOut,
 } from "react-icons/fi";
-// import { RiPencilLine } from "react-icons/ri";
+
 import { BiCog } from "react-icons/bi";
-
-// import Avatar from "react-avatar";
-
-//import card from materialUi
 
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-//import sidebar css from react-pro-sidebar module and our custom css
 import "react-pro-sidebar/dist/css/styles.css";
 import "./dashboard.css";
 import Search from "./search";
-import Services from "./Cards/card";
-import TemplateCard from "./Cards/templateCards";
+import Services from "./Cards/templateCards";
 
-const Dashboard = () => {
-
+const DashboardTemplate = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -58,30 +50,15 @@ const Dashboard = () => {
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
 
-    useEffect(() => {
-        const fetchPrivateDate = async () => {
-            const config = {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${localStorage.getItem("authToken")}`,
-                },
-            };
-
-            try {
-                const { data } = await axios.get("/api/dashboard", config);
-                setPrivateData(data.data);
-            } catch (error) {
-                localStorage.removeItem("authToken");
-                setError("You are not authorized please login");
-            }
-        };
-
-        fetchPrivateDate();
-    }, []);
-
   return (
     <>
-      <div>
+      <div
+        style={{
+          "@media (max-width: 480px)": {
+            setMenuCollapse: true,
+          },
+        }}
+      >
         <div id="dashboard">
           {/* collapsed props to change menu size using menucollapse state */}
           <ProSidebar collapsed={menuCollapse}>
@@ -115,15 +92,14 @@ const Dashboard = () => {
             </SidebarHeader>
             <SidebarContent>
               <Menu iconShape="square">
-                <MenuItem active={true} icon={<FaPlus />}>
+                <MenuItem
+                  icon={<FaPlus />}
+                  onClick={(event) => (window.location.href = "/dashboard")}
+                >
+                  {" "}
                   New Presentation
                 </MenuItem>
-                <MenuItem
-                  icon={<FaMagic />}
-                  onClick={(event) =>
-                    (window.location.href = "/dashboardTemplate")
-                  }
-                >
+                <MenuItem active={true} icon={<FaMagic />}>
                   Explore Templates
                 </MenuItem>
                 <MenuItem icon={<FaTv />}>My Presentations</MenuItem>
@@ -145,12 +121,12 @@ const Dashboard = () => {
           <Search />
 
           {/* <Avatar
-          name="Afrin Sultana"
-          value="86%"
-          size="60"
-          round={true}
-          style={{ float: "right", display: "absoulate" }}
-        /> */}
+        name="Afrin Sultana"
+        value="86%"
+        size="60"
+        round={true}
+        style={{ float: "right", display: "absoulate" }}
+      /> */}
         </div>
 
         <div
@@ -162,20 +138,22 @@ const Dashboard = () => {
         ></div>
         <div
           style={{
-            paddingLeft: menuCollapse ? "-2%" : "0%",
+            maxHeight: "580px",
+            overflowY: "scroll",
+            paddingLeft: menuCollapse ? "-2%" : "4.5%",
           }}
         >
           <Services />
         </div>
 
         {/* <TemplateCard
-        img="https://picsum.photos/id/54/400/300"
-        title="What I learned from my visit to The Upside Down"
-        author="Click to view"
-      ></TemplateCard>  */}
+      img="https://picsum.photos/id/54/400/300"
+      title="What I learned from my visit to The Upside Down"
+      author="Click to view"
+    ></TemplateCard>  */}
       </div>
     </>
   );
 };
 
-export default Dashboard;
+export default DashboardTemplate;

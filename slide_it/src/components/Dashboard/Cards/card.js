@@ -25,7 +25,9 @@ const Services = () => {
             <ServicesH2>Use a Template</ServicesH2>
             <ServicesP>Use any template </ServicesP>
           </ServicesCard>
-          <ServicesCard>
+          <ServicesCard
+            onClick={(event) => (window.location.href = "/document")}
+          >
             <ServicesIcon src={Icon2} />
             <ServicesH2>Blank Presentation</ServicesH2>
             <ServicesP>Create your own slides </ServicesP>
@@ -33,7 +35,7 @@ const Services = () => {
           <ServicesCard>
             <ServicesIcon src={Icon3} />
             <ServicesH2>Redesign a presentation</ServicesH2>
-            <ServicesP>Edit any existing presentation  </ServicesP>
+            <ServicesP>Edit any existing presentation </ServicesP>
           </ServicesCard>
         </ServicesWrapper>
       </ServicesContainer>

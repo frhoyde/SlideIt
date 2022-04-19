@@ -23,6 +23,7 @@ export default function TextEditor() {
 
   useEffect(() => {
     const s = io("http://localhost:3001");
+    console.log(s);
     setSocket(s);
 
     return () => {

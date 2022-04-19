@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TemplateContainer = styled.div`
+export const ServicesContainer = styled.div`
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -15,10 +15,10 @@ export const TemplateContainer = styled.div`
   }
 `;
 
-export const templateWrapper = styled.div`
-  margin: 0 auto;
+export const ServicesWrapper = styled.div`
+  margin: auto auto;
   max-width: 3000px;
-  padding: 0 50px;
+  padding: 0 0px;
   align-items: center;
   grid-gap: 50px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -33,34 +33,36 @@ export const templateWrapper = styled.div`
   }
 `;
 
-export const templateCard = styled.div`
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    background: #fff;
-    width: 24em;
-    max-width:20rem;
-    border-radius: 0.6em;
-    margin: 1em;
-    overflow: hidden;
+export const ServicesCard = styled.div`
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  height: 240px;
+  padding: 0px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 2);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
     cursor: pointer;
-    box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
-    transition: all ease 200ms;
-    &:hover {
-        transform: scale(1.03);
-        box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
-      }
   }
 `;
 
-export const templateIcon = styled.img`
-  width: 100%;
-  object-fit: cover;
+export const ServicesIcon = styled.img`
+  height: 180px;
+  width: 280px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 `;
 export const ServicesH1 = styled.h1`
   margin-bottom: 44px;
-  padding-right: 30%;
+
+  //padding-right: 30%;
   font-size: 2rem;
   color: #0d0d0d;
   @media screen and (max-width: 480px) {
@@ -68,26 +70,25 @@ export const ServicesH1 = styled.h1`
   }
 `;
 
-export const templateH2 = styled.h2`
-  color: #222;
-  margin-top: -0.2em;
-  line-height: 1.4;
-  font-size: 1.3em;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  transition: all ease-in 100ms;
+export const ServicesH2 = styled.h2`
+  //margin-bottom: 10px;
+  display: inline-block;
+  // display: absolute;
+  width: 30px;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  align-items: flex-start;
+`;
+export const ServicesButton = styled.div`
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
 `;
 
-export const templateH5 = styled.h2`
-  color: #bbb;
-  font-weight: 700;
-  font-size: 0.7em;
-  letter-spacing: 0.04em;
-  margin: 1.4em 0 0 0;
-  text-transform: uppercase;
-`;
-
-export const templateP = styled.p`
+export const ServicesP = styled.p`
   text-align: center;
   font-size: 1rem;
 `;
