@@ -21,7 +21,7 @@ const StyledImage = styled.img<{ selected: boolean }>`
   font-size: 1.3em;
   padding: 0.5em;
   border: 2px solid
-    ${({ selected }) => (selected ? "#15aabf" : "rgba(0, 0, 0, 0)")};
+    ${({ selected }) => (selected ? "#f47100" : "rgba(0, 0, 0, 0)")};
 `;
 
 const Container = styled.div`

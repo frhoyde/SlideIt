@@ -32,7 +32,7 @@ function PresentMenu({ togglePresent }: { togglePresent: () => void }) {
             togglePresent();
           }}
           title="Exit"
-          data-tooltip="Exit present mode"
+          data-tooltip="Exit"
         >
           <ExitIcon />
         </StyledButton>

@@ -9,7 +9,12 @@ import { HistoryContext } from "../../../context/history";
 
 const Container = styled.div`
   overflow-y: scroll;
-  white-space: nowrap;
+  //overflow-x: scroll;
+  white-space: pre-line;
+  margin-left: 0px;
+  align-content: center;
+  width: min-content;
+  padding: 30px;
 `;
 
 function ThumbnailsBar() {
@@ -49,7 +54,7 @@ function ThumbnailsBar() {
           );
         }}
       >
-        <Droppable droppableId="thumbnails" direction="horizontal">
+        <Droppable droppableId="thumbnails" direction="vertical">
           {(provided: any) => (
             <Container {...provided.droppableProps} ref={provided.innerRef}>
               {slides.map((item, index) => (

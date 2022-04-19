@@ -192,7 +192,7 @@ function Image() {
           <a href="#" onClick={loadLocalImage}>
             Load a local file <br />
           </a>
-          - Paste the image directly or its remote URL
+          - Paste the image directly 
           <br />
           - Drag and drop it as a file anywhere in the page <br />
         </Modal>

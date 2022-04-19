@@ -20,11 +20,12 @@ const Container = styled.div<{
   active: boolean;
 }>`
   position: relative;
+  padding: 0.1em;
   display: inline-block;
   height: ${({ height }) => height + 2}px;
   width: ${({ width }) => width + 2}px;
   vertical-align: middle;
-  border: ${({ active }) => (active ? "1px solid #15aabf" : "1px solid #fff")};
+  border: ${({ active }) => (active ? "1px solid #FFB300" : "1px solid #fff")};
   cursor: pointer;
 `;
 
