@@ -26,7 +26,7 @@ const Services = () => {
             <ServicesP>Use any template </ServicesP>
           </ServicesCard>
           <ServicesCard
-            onClick={(event) => (window.location.href = "/document")}
+            onClick={(event) => (window.location.href = "/presentation")}
           >
             <ServicesIcon src={Icon2} />
             <ServicesH2>Blank Presentation</ServicesH2>

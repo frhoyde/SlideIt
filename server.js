@@ -59,9 +59,9 @@ const defaultValue = "";
 io.on("connection", (socket) => {
   console.log("Done Socket ConnecTed");
 
-  socket.on("get-paragraph", (slideNumber, item) => {
-    io.emit("receive-paragraph", slideNumber, item);
-    console.log(slideNumber, item);
+  socket.on("get-paragraph", (slide, item) => {
+    io.emit("receive-paragraph", slide, item);
+    console.log(slide, item);
   });
   // socket.on("get-document", async (documentId) => {
   //   const document = await findOrCreateDocument(documentId);
@@ -78,13 +78,13 @@ io.on("connection", (socket) => {
   // });
 });
 
-async function findOrCreateDocument(id) {
-  if (id == null) return;
+// async function findOrCreateDocument(id) {
+//   if (id == null) return;
 
-  const document = await Document.findById(id);
-  if (document) return document;
-  return await Document.create({ _id: id, data: defaultValue });
-}
-io.on("connect_error", (err) => {
-  console.log(`connect_error due to ${err.message}`);
-});
+//   const document = await Document.findById(id);
+//   if (document) return document;
+//   return await Document.create({ _id: id, data: defaultValue });
+// }
+// io.on("connect_error", (err) => {
+//   console.log(`connect_error due to ${err.message}`);
+// });
